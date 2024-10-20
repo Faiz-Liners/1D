@@ -13,11 +13,14 @@ module.exports = {
   // /public directory of your GitHub project (not your OneDrive folder!), and referenced here by its relative path to /public.
   icon: '/icons/128.png',
 
+  // Prefix for KV Storage
+  kvPrefix: process.env.KV_PREFIX || '',
+  
   // The name of your website. Present alongside your icon.
   title: "Rocket TV's OneDrive",
 
   // The folder that you are to share publicly with onedrive-cf-index-ng. Use '/' if you want to share your root folder.
-  baseDirectory: '/',
+  baseDirectory: process.env.BASE_DIRECTORY || '/',
 
   // [OPTIONAL] This represents the maximum number of items that one directory lists, pagination supported.
   // Do note that this is limited up to 200 items by the upstream OneDrive API.
